@@ -9,6 +9,14 @@ public class Stack {
 		SIZE=size;
 		top=-1;
 	}
+	public boolean isEmpty() {
+		if(top==-1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	public boolean push(String elem) {
 		if(top+1>=SIZE) {
 			return false;
