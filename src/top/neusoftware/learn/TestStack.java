@@ -1,7 +1,7 @@
 package top.neusoftware.learn;
 
 public class TestStack {
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		String[] postfix= {"6","5","2","3","+","8","*","+","3","+","*"};
 		String[] infix= {"1","+","2","*","3","+","(","4","*","5","+","6",")","*","7"};
 		//calculatePostfix(postfix);
@@ -14,7 +14,7 @@ public class TestStack {
 		}
 		System.out.println();
 		calculatePostfix(newPostfix);
-	}
+	}*/
 	public static void calculatePostfix(String[] postfix) {	//计算后缀表达式
 		Stack transform=new Stack(postfix.length);
 		for(int i=0;i<postfix.length;i++) {
