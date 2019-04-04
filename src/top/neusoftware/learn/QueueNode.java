@@ -1,31 +1,26 @@
 package top.neusoftware.learn;
 
-public class QueueNode {
-	private String data;	//数据域
-	private QueueNode next;	//指针域
-	public QueueNode() {
-		super();
+public class QueueNode<T> {
+	private T data;	//数据域
+	private QueueNode<T> next;	//指针域
+	public QueueNode() {	//保留不带参数的构造方法
+		
 	}
-	public QueueNode(String data, QueueNode next) {
-		super();
-		this.data = data;
-		this.next = next;
-	}
-	public QueueNode(String data) {
+	public QueueNode(T data) {
 		super();
 		this.data = data;
 		this.next = null;
 	}
-	public String getData() {
+	public T getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(T data) {
 		this.data = data;
 	}
-	public QueueNode getNext() {
+	public QueueNode<T> getNext() {
 		return next;
 	}
-	public void setNext(QueueNode next) {
+	public void setNext(QueueNode<T> next) {
 		this.next = next;
 	}
 	

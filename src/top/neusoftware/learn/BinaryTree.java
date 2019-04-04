@@ -41,8 +41,18 @@ public class BinaryTree {
 	public void postOrder() {
 		postOrder(root);
 	}
-	public void levelTraversal() {
-		Queue treeQueue=new Queue();
-		
+	public void levelTraversal() {	//层次遍历
+		Queue<BiTNode> treeQueue=new Queue<BiTNode>();
+		treeQueue.enQueue(root);
+		while(!treeQueue.isEmpty()) {	//队列不空循环
+			BiTNode node=treeQueue.deQueue();
+			System.out.print(node.getData()+"\t");
+			if(node.getLchild()!=null) {	//左子结点不空就入队
+				treeQueue.enQueue(node.getLchild());
+			}
+			if(node.getRchild()!=null) {	//右子结点不空就入队
+				treeQueue.enQueue(node.getRchild());
+			}
+		}
 	}
 }
