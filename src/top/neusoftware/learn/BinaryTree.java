@@ -41,4 +41,8 @@ public class BinaryTree {
 	public void postOrder() {
 		postOrder(root);
 	}
+	public void levelTraversal() {
+		Queue treeQueue=new Queue();
+		
+	}
 }
