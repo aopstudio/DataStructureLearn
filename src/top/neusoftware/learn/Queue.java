@@ -1,31 +1,40 @@
 package top.neusoftware.learn;
 
-public class Queue<T> {	//链式队列实现
-	private QueueNode<T> front,rear;
-	public Queue() {
-		front=rear=new QueueNode<T>();
-		front.setNext(null);
+public class Queue {	//循环队列，牺牲一个存储单元来判断队满和队空，rear指向队尾元素后面那个下标
+	private String[] list;
+	private int front, rear;	//队首、队尾
+	private final int SIZE;
+	public Queue(int size) {
+		list=new String[size];
+		SIZE=size;
+		front=rear=0;
 	}
-	public boolean isEmpty() {	//判空
-		if(front==rear)
+	public boolean isEmpty() {
+		if (front==rear) {
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
 	}
-
-	public void enQueue(T data) {	//入队
-		QueueNode<T> node=new QueueNode<T>(data);
-		rear.setNext(node);
-		rear=rear.getNext();
+	public boolean enQueue(String data) {
+		if((rear+1)%SIZE==front) {	//队满
+			return false;	//入队失败
+		}
+		else {
+			list[rear]=data;
+			rear=(rear+1)%SIZE;
+			return true;
+		}
 	}
-	public T deQueue() {	//出队
-		if(isEmpty())
+	public String deQueue() {
+		if(isEmpty()) {	//队空
 			return null;
-		QueueNode<T> node=front.getNext();
-		T data=node.getData();
-		front.setNext(node.getNext());
-		if(rear==node)	//原队列中只有一个结点
-			rear=front;	//置空
-		return data;
+		}
+		else {
+			String data=list[front];
+			front=(front+1)%SIZE;
+			return data;
+		}
 	}
 }

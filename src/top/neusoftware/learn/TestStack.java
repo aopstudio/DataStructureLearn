@@ -15,6 +15,7 @@ public class TestStack {
 		System.out.println();
 		calculatePostfix(newPostfix);
 	}*/
+
 	public static void calculatePostfix(String[] postfix) {	//计算后缀表达式
 		Stack transform=new Stack(postfix.length);
 		for(int i=0;i<postfix.length;i++) {

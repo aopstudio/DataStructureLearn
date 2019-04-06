@@ -1,12 +1,12 @@
 package top.neusoftware.learn;
 
-public class QueueNode<T> {
+public class LinkNode<T> {
 	private T data;	//数据域
-	private QueueNode<T> next;	//指针域
-	public QueueNode() {	//保留不带参数的构造方法
+	private LinkNode<T> next;	//指针域
+	public LinkNode() {	//保留不带参数的构造方法
 		
 	}
-	public QueueNode(T data) {
+	public LinkNode(T data) {
 		super();
 		this.data = data;
 		this.next = null;
@@ -17,10 +17,10 @@ public class QueueNode<T> {
 	public void setData(T data) {
 		this.data = data;
 	}
-	public QueueNode<T> getNext() {
+	public LinkNode<T> getNext() {
 		return next;
 	}
-	public void setNext(QueueNode<T> next) {
+	public void setNext(LinkNode<T> next) {
 		this.next = next;
 	}
 	

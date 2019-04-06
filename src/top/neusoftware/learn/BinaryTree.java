@@ -42,7 +42,7 @@ public class BinaryTree {
 		postOrder(root);
 	}
 	public void levelTraversal() {	//层次遍历
-		Queue<BiTNode> treeQueue=new Queue<BiTNode>();
+		LinkQueue<BiTNode> treeQueue=new LinkQueue<BiTNode>();
 		treeQueue.enQueue(root);
 		while(!treeQueue.isEmpty()) {	//队列不空循环
 			BiTNode node=treeQueue.deQueue();
