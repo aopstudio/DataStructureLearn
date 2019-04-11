@@ -1,33 +1,33 @@
 package top.neusoftware.learn;
 
-public class BiTNode {
-	private String data;
-	private BiTNode lchild,rchild;
-	public BiTNode(String data, BiTNode lchild, BiTNode rchild) {
+public class BiTNode<T> {
+	private T data;
+	private BiTNode<T> lchild,rchild;
+	public BiTNode(T data, BiTNode<T> lchild, BiTNode<T> rchild) {
 		super();
 		this.data = data;
 		this.lchild = lchild;
 		this.rchild = rchild;
 	}
-	public BiTNode(String data) {
+	public BiTNode(T data) {
 		this.data=data;
 	}
-	public String getData() {
+	public T getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(T data) {
 		this.data = data;
 	}
-	public BiTNode getLchild() {
+	public BiTNode<T> getLchild() {
 		return lchild;
 	}
-	public void setLchild(BiTNode lchild) {
+	public void setLchild(BiTNode<T> lchild) {
 		this.lchild = lchild;
 	}
-	public BiTNode getRchild() {
+	public BiTNode<T> getRchild() {
 		return rchild;
 	}
-	public void setRchild(BiTNode rchild) {
+	public void setRchild(BiTNode<T> rchild) {
 		this.rchild = rchild;
 	}
 	
