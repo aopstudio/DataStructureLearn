@@ -16,7 +16,6 @@ public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 		this.vertexes=new String[max];
 		this.vexNum=0;
 	}
-
 	public boolean insertVertex(String vertex){
 		if(vexNum==vertexes.length){
 			return false;
@@ -38,6 +37,10 @@ public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 			if(vertexes[i].equals(vertex)){
 				vertexes[i]=null;
 				vexNum--;
+				for(int j=0;j<vertexes.length;j++){
+					edges[i][j]=0;	//与顶点相关的所有边都删除
+					edges[j][i]=0;
+				}
 				return true;
 			}
 		}
@@ -50,5 +53,15 @@ public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 		edges[x][y]=1;
 		edges[y][x]=1;
 		return true;
+	}
+
+	public void BFS(int v){
+		LinkQueue<String> queue=new LinkQueue<String>();
+		System.out.print(vertexes[v]);
+		queue.enQueue(vertexes[v]);
+		while (!queue.isEmpty()) {
+			queue.deQueue();
+			for()
+		}
 	}
 }
