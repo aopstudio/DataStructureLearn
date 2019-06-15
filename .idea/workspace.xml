@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e816d9b-84eb-4460-b4a4-e3cc53eb2bc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/BSTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/BSTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/BiTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/BiTNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/BinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/LinkStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/Queue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/Stack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestBiTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestBiTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/learn/TestStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/neusoftware/learn/ListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/neusoftware/learn/ListGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -24,8 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -59,8 +48,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="589">
+              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+              <folding>
+                <element signature="e#1305#1313#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +66,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/top/neusoftware/learn/TestQueue.java" />
+        <option value="$PROJECT_DIR$/src/top/neusoftware/learn/ListGraph.java" />
         <option value="$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java" />
       </list>
     </option>
@@ -93,7 +86,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,9 +108,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/java/Graph" />
@@ -180,17 +174,18 @@
       <workItem from="1556951428648" duration="1738000" />
       <workItem from="1556954692912" duration="603000" />
       <workItem from="1556956212220" duration="2291000" />
+      <workItem from="1557031788049" duration="3946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4730000" />
+    <option name="totallyTimeSpent" value="8676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25979382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26323023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -246,10 +241,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/learn/ListGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/neusoftware/learn/MatrixGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        <state relative-caret-position="589">
+          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding>
+            <element signature="e#1305#1313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
