@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class TestQueue {
 	/*public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class BiTNode<T> {
 	private T data;

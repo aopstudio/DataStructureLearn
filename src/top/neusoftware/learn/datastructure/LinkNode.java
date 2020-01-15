@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class LinkNode<T> {
 	private T data;	//数据域

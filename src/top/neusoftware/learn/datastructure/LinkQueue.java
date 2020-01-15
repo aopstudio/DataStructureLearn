@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class LinkQueue<T> {	//链式队列实现
 	private LinkNode<T> front,rear;

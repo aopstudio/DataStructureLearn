@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 //用邻接矩阵表示的图
 public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 	private int[][] edges;	//存放边的信息

@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class Queue {	//循环队列，牺牲一个存储单元来判断队满和队空，rear指向队尾元素后面那个下标
 	private String[] list;

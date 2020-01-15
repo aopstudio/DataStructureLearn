@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 //二叉查找树
 public class BSTree extends BinaryTree<Integer> {
 	public BSTree(int[] str) {

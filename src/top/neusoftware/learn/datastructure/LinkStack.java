@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class LinkStack<T> {	//带头结点的链式栈
 	private LinkNode<T> hNode;	//头结点

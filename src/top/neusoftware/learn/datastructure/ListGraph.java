@@ -1,4 +1,4 @@
-package top.neusoftware.learn;
+package top.neusoftware.learn.datastructure;
 
 public class ListGraph {
     private VNode[] mVexs;  // 顶点数组,即邻接表
