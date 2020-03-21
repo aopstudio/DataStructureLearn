@@ -1,14 +1,19 @@
 package top.neusoftware.learn.algorithm;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 public class Sort {
 	public static void main(String[] args) {
-		int[] data= {10,5,8,7,4,1,3,6};
+		int[] data= {10,5,8,7,4,1,3,6,9,0};
 		int[] temp=new int[data.length];
-		quickSort(data,0,7);
+		quickSort(data,0,data.length-1);
 		//mergeSort(data,0,7,temp);
 		//insertSort(data);
 		//selectSort(data);
 		//shellSort(data);
+		//heapSort(data);
 		for(int i=0;i<data.length;i++) {
 			System.out.print(data[i]+" ");
 		}
@@ -73,7 +78,7 @@ public class Sort {
 		}
 	}
 
-
+	//
 
 	//计数排序
 	public static void countingSort(int[] data) {
@@ -105,10 +110,11 @@ public class Sort {
 
 	//快速排序
 	public static int[] quickSort(int[] a,int low,int high) {
+		
 		if(low>high)
 			return null;
 		int i=low,j=high;
-		int k=a[i];
+		int k=a[low];
 		while(i<j) {
 			while(i<j&&a[j]>k) {	//从后往前找到第一个比k小的值
 				j--;
@@ -123,9 +129,8 @@ public class Sort {
 			}
 		}
 		//此时i==j，一轮结束，交换i指向的元素与首元素
-		k=a[i];
-		a[i]=a[low];
-		a[low]=k;
+		a[low]=a[i];
+		a[i]=k;
 		quickSort(a,low,i-1);
 		quickSort(a,i+1,high);
 		return a;
@@ -158,6 +163,36 @@ public class Sort {
 		}
 		for(int t=0;t<i;t++){
 			a[low+t]=temp[t];
+		}
+	}
+
+	//堆排序（小顶堆,排序结果从大到小）
+	public static void heapSort(int[] a){
+		int length=a.length;
+		for(int i=length/2-1;i>=0;i--){
+			heapify(a,i,a.length);
+		}
+		for(int n=a.length-1;n>0;n--){
+			int temp=a[0];
+			a[0]=a[n];
+			a[n]=temp;
+			heapify(a,0,n);
+		}
+	}
+	public static void heapify(int[] a,int i,int n){
+		while(2*i+1<n){
+			int left=2*i+1;
+			int right=left+1;
+			if(right<n&&a[right]<a[left]){	//右边更小，则选右边的
+				left++;
+			}
+			if(a[i]<=a[left]){	//父结点比子结点更小
+				break;
+			}
+			int temp=a[i];
+			a[i]=a[left];
+			a[left]=temp;
+			i=left;
 		}
 	}
 }

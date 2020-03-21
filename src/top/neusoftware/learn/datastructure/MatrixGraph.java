@@ -1,4 +1,7 @@
 package top.neusoftware.learn.datastructure;
+
+import java.util.LinkedList;
+import java.util.List;
 //用邻接矩阵表示的图
 public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 	private int[][] edges;	//存放边的信息
@@ -84,11 +87,63 @@ public class MatrixGraph {	//不带权的简单无向图的邻接矩阵表示
 		if(x>vertexes.length-1 || y>vertexes.length-1){	//越界
 			return -1;
 		}
-		for (int i=y;i<vertexes.length;i++){
+		for (int i=y+1;i<vertexes.length;i++){
 			if(edges[x][i]!=0){	//存在边
 				return i;	//返回i
 			}
 		}
 		return -1;	//没有相邻的顶点
+	}
+
+	private void depthFirstSearch(boolean[] isVisited,int  i) {
+		//首先访问该结点，在控制台打印出来
+		System.out.print(vertexes[i]+"  ");
+		//置该结点为已访问
+		isVisited[i]=true;
+
+		int w=firstNeighbor(i);//
+		while (w!=-1) {
+			if (!isVisited[w]) {
+				depthFirstSearch(isVisited,w);
+			}
+			w=nextNeighbor(i, w);
+		}
+	}
+
+	//对外公开函数，深度优先遍历，与其同名私有函数属于方法重载
+	public void depthFirstSearch() {
+		boolean[] isVisited=new boolean[vexNum];
+		for(int i=0;i<vexNum;i++) {
+			//因为对于非连通图来说，并不是通过一个结点就一定可以遍历所有结点的。
+			if (!isVisited[i]) {
+				depthFirstSearch(isVisited,i);
+			}
+		}
+	}
+
+	public void broadFirstSearch(){
+		boolean[] isVisited=new boolean[vexNum];
+		for(int i=0;i<vexNum;i++){
+			if(!isVisited[i]){
+				broadFirstSearch(isVisited,i);
+			}
+		}
+	}
+
+	private void broadFirstSearch(boolean[] isVisited,int i){
+		LinkedList<Integer> queue=new LinkedList<Integer>();
+		queue.offer(i);
+		while(!queue.isEmpty()){
+			int j=queue.poll();
+			isVisited[j]=true;
+			System.out.print(vertexes[j]+" ");
+			int u=firstNeighbor(j);
+			while(u!=-1){
+				if(!isVisited[u]){
+					queue.offer(u);
+				}
+				u=nextNeighbor(j,u);
+			}
+		}
 	}
 }
